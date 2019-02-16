@@ -4,23 +4,10 @@ module.exports = {
     new: newFlight,
     create,
     index
-    // order: flightOrder
 };
 
-// function flightOrder(req, res) { 
-  // Flight.find({}, null, {sort: '-date'}, function(err, flights) {
-  //   res.render('flights/index', { flights })
-  // });
-
-  // OR
-        // Flight.find().sort({date: -1}, function(err, flights){
-        //   res.render('flights/index', { flights });
-        // })
-        // };
-
-
 function index(req, res) {
-  Flight.find({}, null, {sort: '-date'}, function(err, flights) {
+      Flight.find({}).sort({date: -1}).exec(function(err, flights) {
           res.render('flights/index', { flights });
         });
     };

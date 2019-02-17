@@ -7,10 +7,10 @@ module.exports = {
 };
 
 function index(req, res) {
-      Flight.find({}).sort({date: -1}).exec(function(err, flights) {
-          res.render('flights/index', { flights });
-        });
-    };
+  Flight.find({}).sort({date: -1}).exec(function(err, flights) {
+    res.render('flights/index', { flights });
+  });
+}
 
 function create(req, res) {
     for (let key in req.body){

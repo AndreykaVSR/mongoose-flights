@@ -3,12 +3,12 @@
   <table>
       <thead>
           <tr>
-              <th style = "color: white;" >Airline</th>
-              <th style = "color: white;" >Flight #</th>
-              <th style = "color: white;" >Departs</th>
+              <th style = "color: rgb(80, 79, 79);" >Airline</th>
+              <th style = "color: rgb(80, 79, 79);" >Flight #</th>
+              <th style = "color: rgb(80, 79, 79);" >Departs</th>
           </tr>
       </thead>
-      <tbody style = "color: white;" >
+      <tbody style = "color: rgb(80, 79, 79);" >
           <% flights.forEach(function(f) { %>
               <tr>
                   <td><%= f.airline %></td>
@@ -22,5 +22,4 @@
           <% }); %>
       </tbody>
   </table>
-</body>
-</html>
+  <%- include('../partials/footer') %>

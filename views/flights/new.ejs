@@ -1,5 +1,4 @@
 <%- include('../partials/template') %>
-<body>
     <h1>Enter a New Flight</h1>
     <form action="/flights" method="POST">
         <label>Airline:
@@ -13,9 +12,8 @@
           <input type="number" name="flightNo">
         </label><br>
         <label>Departs:
-            <input class=localTime type="datetime-local" name="departs">
+            <input class=timeLocal type="datetime-local" name="departs">
         </label><br>
-        <input type="submit" value="Add Flight">
-    </form>   
-</body>
-</html>
+        <input id="btnAddFlight" type="submit" value="Add Flight">
+    </form> 
+    <%- include('../partials/footer') %>

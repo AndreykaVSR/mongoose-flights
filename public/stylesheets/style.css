@@ -1,8 +1,17 @@
 body {
+  /* background-image: url("https://i.imgur.com/Mjea6WX.jpg");  */
+  /* background-position: 100% 100%; */
+  background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  align-content: center;
+  color: white;
 }
 
-a {
-  color: #00B7FF;
+a #allFlights {
+  color: white;
+}
+
+div {
+  position: absolute;
 }

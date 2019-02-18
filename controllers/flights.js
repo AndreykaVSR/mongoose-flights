@@ -7,7 +7,7 @@ module.exports = {
 };
 
 function index(req, res) {
-  Flight.find({}).sort({date: -1}).exec(function(err, flights) {
+  Flight.find({}).sort({departs: -1}).exec(function(err, flights) {
     res.render('flights/index', { flights });
   });
 }

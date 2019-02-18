@@ -1,24 +1,109 @@
 body {
-  /* background-image: url("https://i.imgur.com/Mjea6WX.jpg");  */
-  /* background-position: 100% 100%; */
+  background: url(https://i.imgur.com/1NpKglI.jpg); 
+  background-position: 100% 100%;
+  background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(187, 190, 145); 
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   align-content: center;
-  color: white;
-  /* font: 16px; */
+  color: rgb(80, 80, 80);
+}
+
+.navElm {
+  margin: 0px 0px 7px 0px;
+  color: rgb(80, 80, 80);
 }
 
 h1 {
-    color: white;
+    color: rgb(80, 80, 80);
 }
 
-a #flightsAll {
-  color: rgb(80, 79, 79);
+#home, #flightsAll, #flightsAdd {
+  color: rgb(80, 80, 80);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a #btnAddFlight {
-  border: 3px;
-  padding: 10px;
+#btnFlightAdd {
+  margin: 20px auto;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(193, 171, 130, .9);
+  border: 4px;
+  background-color: rgba(167, 46, 2, .9);
+  border-radius: 3px;
+  padding: 5px;
 }
+
+#tableFlight {
+  /* background-color: rgb(221, 112, 72); */
+  border: 4px;
+  border-color: rgb(167, 46, 2);
+}
+
+#tblBodyFlights {
+  color: rgb(29, 28, 28); 
+  margin: 7px;
+  padding: 10px;
+  background-color: rgba(221, 112, 72, .8);
+  border: 5px;
+  border-color: rgba(167, 46, 2, 1);
+}
+
+thead {
+  font-size: 16px;
+}
+
+table, th, td {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 10px;
+  border-color: rgba(167, 46, 2, 1);
+}
+
+tr:hover {
+  color: rgb(223, 219, 219)
+}
+
+
+label {
+  color: rgb(53, 52, 52);
+  margin: 10px 0px; 
+  padding: 10px 0px; 
+  /* text-align: left; */
+  font-size: 16px;
+}
+
+input {
+  background-color: rgb(246, 248, 217); 
+  border-color: rgb(190, 192, 166); 
+  /* box-shadow: teal;  */
+  font-size: 20px;
+  margin: 3px 0px;
+  padding: 3px 0px;
+  text-align: center;
+  font-size: 14px;
+}
+
+select {
+  font-size: 20px;
+  /* border-radius: 0px; */
+  /* appearance: none; */
+  background-color:rgb(246, 248, 217); 
+  border-color: rgb(71, 71, 62); 
+  /* border: 5px; */
+  /* box-shadow: teal;  */
+  margin: 3px 0px;
+  padding: 10px 0px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+} */

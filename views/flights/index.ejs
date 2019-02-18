@@ -1,6 +1,6 @@
 <%- include('../partials/template') %>
   <h1>Your Flight List</h1>
-  <table>
+  <table id = "tableFlight">
       <thead>
           <tr>
               <th style = "color: rgb(80, 79, 79);" >Airline</th>
@@ -8,13 +8,13 @@
               <th style = "color: rgb(80, 79, 79);" >Departs</th>
           </tr>
       </thead>
-      <tbody style = "color: rgb(80, 79, 79);" >
+      <tbody id = "tblBodyFlights">
           <% flights.forEach(function(f) { %>
               <tr>
                   <td><%= f.airline %></td>
                   <td><%= f.flightNo %></td>
                   <% if (f.departs < new Date()) { %>
-                  <td style = "color: red"> <%= f.departs %> </td>
+                  <td style = "color: rgb(143, 2, 2)"> <%= f.departs %> </td>
                   <% } else { %>
                     <td> <%= f.departs %> </td>
                     <% } %>

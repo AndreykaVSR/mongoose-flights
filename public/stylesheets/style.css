@@ -67,7 +67,6 @@ tr:hover {
   color: rgb(223, 219, 219)
 }
 
-
 label {
   color: rgb(53, 52, 52);
   margin: 10px 0px; 
@@ -94,11 +93,19 @@ select {
   background-color:rgb(246, 248, 217); 
   border-color: rgb(71, 71, 62); 
   /* border: 5px; */
-  /* box-shadow: teal;  */
   margin: 3px 0px;
   padding: 10px 0px;
   text-align: left;
   font-size: 14px;
+}
+
+#flightNew {
+  background-color: rgba(221, 112, 72, .8);
+  margin: 0px ;
+  /* display: grid; */
+  grid-template-columns: auto auto;
+  /* grid-gap: 1rem; */
+  /* margin-bottom: 2rem; */
 }
 
 /* {

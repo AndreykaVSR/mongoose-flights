@@ -3,8 +3,18 @@ var Flight = require('../models/flight');
 module.exports = {
     new: newFlight,
     create,
-    index
+    index,
+    show: showDetails 
 };
+
+function showDetails (req, res) {
+  Flight.findById(req.params.id, function(err, flightFound) {
+    console.log(flightFound);
+    console.log(req.params.id);
+    res.render('./flights/show', { title: 'Flights', flight: flightFound })
+  })
+  
+}
 
 function index(req, res) {
   Flight.find({}).sort({departs: -1}).exec(function(err, flights) {

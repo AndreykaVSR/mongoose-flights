@@ -1,21 +1,37 @@
 <%- include('../partials/template') %>
     <h1>Enter a New Flight</h1>
-    <form action="/flights" method="POST">
-        <label>Airline:
+    <form id = "flightNew" action="/flights" method="POST">
+        <label>Departure Airport:</label>
+        <br>
             <div>
-            <select name = "airline">
-                <option value = "United">United</option>
-                <option value = "American">American</option>
-                <option value = "Southwest">Southwest</option>
-            </select>
+                <select name = "airport">
+                    <option value = "AUS">AUS</option>
+                    <option value = "DAL">DAL</option>
+                    <option value = "LAX">LAX</option>
+                    <option value = "SEA">SEA</option>
+                </select>
             </div>
-        </label><br>
-        <label>Flight No:
-          <input type = "number" name = "flightNo">
-        </label><br>
-        <label>Departs:
-            <input class = "timeLocal" type = "datetime-local" name = "departs">
-        </label><br>
-        <input id = "btnFlightAdd" type = "submit" value = "Add Flight">
+        <label>Airline:</label>
+        <br>
+            <div>
+                <select name = "airline">
+                    <option value = "United">United</option>
+                    <option value = "American">American</option>
+                    <option value = "Southwest">Southwest</option>
+                 </select>
+            </div>
+        <label>Flight No:</label>
+        <br>
+            <div>
+                <input type = "number" name = "flightNo">
+            </div>
+        <label>Departs:</label>
+        <br>
+            <div>
+                <input class = "timeLocal" type = "datetime-local" name = "departs">
+            </div>
+            <div>
+                <input id = "btnFlightAdd" type = "submit" value = "Add Flight">
+            </div>
     </form> 
     <%- include('../partials/footer') %>

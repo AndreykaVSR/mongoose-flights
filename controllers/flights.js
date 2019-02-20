@@ -4,16 +4,27 @@ module.exports = {
     new: newFlight,
     create,
     index,
-    show: showDetails 
+    show
+    // addToFlight
 };
 
-function showDetails (req, res) {
-  Flight.findById(req.params.id, function(err, flightFound) {
-    console.log(flightFound);
+// function addToFlight(req, res) {
+//   Flight.findById(req.params.id, function(err, flight) {
+//     flight.push(req.body.flightId);
+//     flight.save(function(err) {
+//       res.render('/flights/show/${flight._id}');
+//     });
+//   });
+// }
+
+function show(req, res) {
+  console.log('I see you');
+  Flight.findById(req.params.id, function(err, flight) {
+    // console.log('I see you');
+    // console.log(flightFound);
     console.log(req.params.id);
-    res.render('./flights/show', { title: 'Flights', flight: flightFound })
-  })
-  
+    res.render('./flights/show', { title: 'Flights',  flight })
+  });
 }
 
 function index(req, res) {
@@ -30,7 +41,7 @@ function create(req, res) {
     flight.save(function(err) {
       // one way to handle errors
       if (err) return res.render('flights/new');
-      console.log(flight);
+      // console.log(flight);
       // for now, redirect right back to new.ejs
       res.redirect('/flights');
     });

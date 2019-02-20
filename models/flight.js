@@ -24,9 +24,11 @@ var mongoose = require('mongoose');
         default: function() {
             var date = new Date();
             return new Date(date.setFullYear(date.getFullYear() + 1));
-          },
-        destination: [destinationSchema]
-    }
+          }
+        },
+    destination: {
+        type: [destinationSchema]
+        }
 });
 
 var destinationSchema = new Schema({
@@ -38,5 +40,21 @@ var destinationSchema = new Schema({
         }
     },
 });    
+
+var ticketSchema = new Schema({
+        seat: {
+            type: String, 
+            match: /[A-F][1-9]\d?/
+        },
+        price: {
+            type: Number,
+            min: 0
+        },
+        flight: {
+            type: ObjectId,
+            ref: 'Flight',
+        }
+});
+
 
  module.exports = mongoose.model('Flight', flightSchema);

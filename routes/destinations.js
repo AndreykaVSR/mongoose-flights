@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var flightsCtrl = require('../controllers/flights');
+var destinationCtrl = require('../controllers/destinations');
 
 /* GET show page. */
 // router.get('/:id', function(req, res, next) {
@@ -8,6 +8,8 @@ var flightsCtrl = require('../controllers/flights');
 //   res.render('./flights/show', { title: 'Flights' });
 // });
 
-router.get('/:id', flightsCtrl.show);
+// router.get('/:id', flightsCtrl.show);
+
+router.post('/flights/:id/destinations', destinationCtrl.create);
 
 module.exports = router;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://localhost:3000/flights/5c6c3598e9054906dbed83f7 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Flights_files/style.css">
+    <title>Flights</title>
+</head>
+<body cz-shortcut-listen="true"> 
+    <!-- https://i.imgur.com/Mjea6WX.jpg -->
+    <nav>
+        <div class="navElm">
+            <a id="home" href="http://localhost:3000/">HOME</a>
+        </div>
+        <div class="navElm">
+            <a id="flightsAdd" href="http://localhost:3000/flights/new/">ADD FLIGHT</a>
+        </div>
+        <div class="navElm">
+            <a id="flightsAll" href="http://localhost:3000/flights">YOUR FLIGHTS LIST</a>
+        </div>
+    </nav>
+
+
+
+
+    <h1>Your Selected Flight Details</h1>
+    <table id="tableFlight">
+        <thead>
+            <tr>
+                <th style="color: rgb(80, 79, 79);">Airport</th>
+                <th style="color: rgb(80, 79, 79);">Airline</th>
+                <th style="color: rgb(80, 79, 79);">Flight #</th>
+                <th style="color: rgb(80, 79, 79);">Departs</th>
+            </tr>
+        </thead>
+        <tbody id="tblBodyFlights">
+            <tr>
+                <td> AUS </td>
+                <td> Southwest </td>
+                <td> 1111 </td>
+                
+            <td> Wed Nov 11 2111 11:11:00 GMT-0600 (Central Standard Time) </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <table id="tableDestination">
+            <thead>
+                <tr>
+                    <th style="color: rgb(80, 79, 79);">Destination Airport</th>
+                    <th style="color: rgb(80, 79, 79);">Arrival Time</th>
+                </tr>
+            </thead>
+            <tbody id="tblBodyFlights">
+                <tr>
+                    <td>  </td>
+                    <td>  </td>
+                </tr>
+            </tbody>
+        </table>
+    <h1>Add Destination</h1>
+    <form id="destinations" action="http://localhost:3000/flights" method="POST">
+        <label>Destination Airport:</label>
+        <br>
+            <div>
+                <select name="airport">
+                    <option value="AUS">AUS</option>
+                    <option value="DAL">DAL</option>
+                    <option value="LAX">LAX</option>
+                    <option value="SEA">SEA</option>
+                </select>
+            </div>
+        <label>Arrival Time:</label>
+        <br>
+            <div>
+                <input class="timeDestination" type="datetime-local" name="arrival">
+            </div>
+        <div>
+            <input id="btnFlightAdd" type="submit" value="Add Destination">
+        </div>
+    </form> 
+
+
+
+
+<p>@ Copyright </p></body></html>

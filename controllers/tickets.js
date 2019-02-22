@@ -5,7 +5,7 @@ module.exports = {
 };
 
 function create(req, res) {
-    console.log('hi Tickets' + req.params.id);
+    // console.log('hi Tickets' + req.params.id); !!! this is working
     var ticket = new Ticket({
         seat: req.body.seat,
         price: req.body.price,

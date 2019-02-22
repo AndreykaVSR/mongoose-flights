@@ -61,11 +61,12 @@
         </form> 
         <br>
     </div>
+
+    
     <div>
     <h1>Your Selected Ticket Details</h1>
     </div>
     <br>
-    <% if (tickets.length) { %>
         <table id = "tableTickets">
             <thead>
                 <tr>
@@ -82,25 +83,24 @@
                 <% }); %>
             </tbody>
         </table>
+        <br>
     </div>
     <h1>Add Ticket</h1>
-    <br>
-        <form id = "tickets" action="/tickets/<%= flight._id %>/tickets" method="POST">
+        <form id = "tickets" action="/flights/<%= flight._id %>/tickets/" method="POST">
         <br>
             <label>Seat:</label>
-            <br>
                 <div>
-                    <input id = "ticketSeat" type = "text" name = "arrival">
+                    <input id = "ticketSeat" type = "text" name = "seat">
                 </div>
-            <label>Price:</label>
-            <br>
                 <div>
-                    <input class = "ticketPrice" type = "text" name = "arrival">
+            <label>Price:</label>
+                <div>
+                    <input class = "ticketPrice" type = "text" name = "price">
+                </div>
                 </div>
                 <div>
                     <input id = "btnFlightAdd" type = "submit" value = "Add Ticket">
                 </div>
-                 <br>
 </form> 
 </div>
 <%- include('../partials/footer') %>

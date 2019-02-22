@@ -5,12 +5,11 @@ module.exports = {
 };
 
 function create(req, res) {
-    console.log('hi' + req.params.id);
+    // console.log('hi' + req.params.id);
   Flight.findById(req.params.id, function(err, flight) {
-    console.log('flight ' + flight);
+    // console.log('flight ' + flight);
     flight.destination.push(req.body);
     flight.save(function(err) {
-    //   res.render(req.params.id './flights/id', { title: 'Flights', flight: flightFound } Destination: 'airport');
     res.redirect(`/flights/${flight._id}`);
     });
   });

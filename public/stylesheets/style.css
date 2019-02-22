@@ -18,6 +18,7 @@ body {
 
 h1 {
     color: rgb(80, 80, 80);
+    text-shadow: 2px 2px chocolate;
 }
 
 #home, #flightsAll, #flightsAdd {
@@ -117,6 +118,19 @@ select {
   /* grid-gap: 1rem; */
   /* margin-bottom: 2rem; */
 }
+
+#tblBodyTickets {
+  color: rgb(29, 28, 28); 
+  margin: 7px;
+  padding: 10px;
+  background-color: rgba(221, 112, 72, .8);
+  border: 5px;
+  border-color: rgba(167, 46, 2, 1);
+}
+
+/* form {
+  background-color: rgba(221, 112, 72, .8);
+} */
 
 /* {
   display: grid;

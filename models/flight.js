@@ -35,26 +35,12 @@ var destinationSchema = new Schema({
     airport: {
         type: String,
         enum: ['AUS', 'DAL', 'LAX', 'SEA'],
-    arrival: {
-        type: Date
-        }
     },
+    arrival: {
+        type: Date  
+    }
 });    
-
-var ticketSchema = new Schema({
-        seat: {
-            type: String, 
-            match: /[A-F][1-9]\d?/
-        },
-        price: {
-            type: Number,
-            min: 0
-        },
-        flight: {
-            type: ObjectId,
-            ref: 'Flight',
-        }
-});
 
 
  module.exports = mongoose.model('Flight', flightSchema);
+ 
